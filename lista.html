@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATRIZ CURRICULAR</title>
+    <link rel="stylesheet" href="lista.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <header>
+        <h1>DISCIPLINAS E CARGA HORÁRIA </h1>
+    </header>
+    <main>
+        <div class="title">
+            <h2>Matriz</h2>
+            <span>RELAÇÃO DAS DISCIPLINA, CH TEÓRICA E CH PRÁTICA</span>
+        </div>
+        <div class="card">
+            <div>
+                <label>Período</label>
+                <input type="text" id="periodo" placeholder="">
+            </div>
+            <div>
+                <label>Disciplina</label>
+                <input type="text" id="disciplina" placeholder="">
+            </div>
+
+            <div>
+                <label>CH Teórica</label>
+                <input type="text" id="cht" placeholder="">
+            </div>
+            <div>
+                <label>CH Prática</label>
+                <input type="text" id="chp" placeholder="">
+            </div>
+            <div>
+                <label>CH Total</label>
+                <input type="text" id="chtotal" placeholder="">
+            </div>
+          <button onclick="produto.salvar()">Salvar</button>
+          <button onclick="produto.cancelar()">Cancelar</button>
+
+        </div>
+        <div class="content">
+            <table border="1">
+                <thead>
+                    <th>ID</th>
+                    <th>periodo</th>
+                    <th>Disciplina</th>
+                    <th>CH Teórica</th>
+                    <th>CH Prática</th>
+                    <th>CH Total</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody id="tbody">
+                   
+                </tbody>
+                
+            </table>
+        </div>
+
+        <script src="matrizPDF.js"></script>
+        <button onclick="downloadPDF()" >Download</button>
+    </main>
+    <script src="lista.js"></script>
+    
+</body>
+</html>
+
+
+<!DOCTYPE html>
+
+<script>
+
+function soma() 
+{
+form.campo4.value = (form.campo1.value*1) + (form.campo2.value*1) //+ (form.campo3.value*1)
+
+}
+
+</script>
+
+<form name="form">
+
+<input name="campo1">CH Teórica<br>
+<input name="campo2">CH Prática<br>
+<input name="campo4" readonly><br>
+
+<input type="button" onclick="soma()" value="Soma os valores">
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
